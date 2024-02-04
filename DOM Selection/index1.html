@@ -1,0 +1,85 @@
+<!-- Document Object Model : Selection
+    
+    Setelah mempelajari apa itu DOM, struktur/hierarki DOM,
+    sekarang kita lanjutkan ke pengelolaan DOM pertama. (selection)
+
+    DOM Selection ini menjadi tahap pertama untuk membantu kita menelusuri ataupun manipulasi pada DOM.
+
+    Ada beberapa method javascript yang kita gunakan pada selection, yaitu
+    - getElementById() : method untuk memilih 'sebuah' element pada DOM HTML yang memiliki id pada elemennya.
+    Perlu diingat kembali bahwa sebuah dokumen HTML hanya diperbolehkan memiliki id satu saja pada elemen tertentu, 
+    maksudnya adalah tidak boleh ada id yang sama antara satu elemen dengan elemen lainnya pada satu dokomen yang sama.
+    (output : element)
+
+    - getElementsByTagName() : method ini membantu kita memilih 'elemen-elemen' pada tag tertentu.
+    (output : HTMLCollection)
+
+    -getElementsByClassName() : method ini membantu kita memilih 'elemen-elemen' pada tag yang memiliki class.
+    (output HTMLCollection)
+
+    -querySelector()  : Method ini membantu kita memilih sebuah elemen yang memiliki selector.
+    (output : element)
+    
+    -querySelectorAll() : Method ini membantu kita memilih elemen-elemen yang memiliki selector.
+    (output : nodeList)
+
+    ingat untuk penulisan method pada format font camel casing, dan
+    ingat kembali perbedaan antara nodelist dan HTMLCollection!
+--> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    /*
+    #b p { color: rgb(249, 246, 246);} /*ini merupakan cara menggunakan selector id*/ 
+    /*
+    li:nth-child(2) {background-color: aqua;} /*menggunakan pseudo class nth-child(i) dengan i mulai dari 1 s.d. n. 
+    */ 
+
+    /*Lebih speifik*/
+    /*section#b ul li:nth-child(2)    {background-color: aqua;}*/
+    
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/mhmad_abdillah">Instagram Abdill</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script src="script1.js"></script> <!-- lebih make sense di bawah -->
+</body>
+</html>
+
