@@ -1,0 +1,82 @@
+<!--Events DOM Lengkap : 
+    Referensi DOM Events
+    https://developer.mozilla.org/en-US/docs/Web/Events
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * { 
+        border: 2px solid #dedede; 
+        padding: 15px; 
+        margin: 15px; 
+    }
+    html { 
+      margin: 0;
+      padding: 0;
+    }
+    body { 
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    /*.p3:active { background-color: lightblue;} jika menggunakan CSS untuk onclick*/
+  </style>
+</head>
+<body>
+
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/mhmad_abdillah">Instagram Mohamad Abdillah</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script src="scriptEvents.js"></script>
+</body>
+</html>
+
+
+
+
+<!--
+perlu diketahui Events != Even (tidak sama).
+Secara bahasa Even artinya genap; Event artinya kejadian.
+
+Event pada js merepresentasikan sebuah kejadian yang nantinya terjadi di dalam DOM.
+Kejadian dapat dilakukan oleh user ataupun oleh komputer itu sendiri secara otomatis.
+contoh dilakukan oleh user : mouse event, keyboard event, dll...
+contoh dilakukan secara otomatis : oleh API(misalkan animasi selesai dijalankan, halaman selesai diload, dsb...)
+
+
+Ada beberapa cara untuk menerapkan Event ini, istilahnya adalah 'mendengarkan'.
+
+-   EventHandler        : source code diinput secara inline HTML Attribute (embedded) atau Element Method pada script js.
+    keyword on<namaevent>, contoh onclick, onkeyboard, dll...
+        btw sangat tidak disarankan menggunakan cara embedd karena melibatkan dokumen html.
+           contoh embedd/inline html :  <p class="p3" onclick="ubahWarna()">paragraf 3</p>
+
+-   addEventListener()
+
+
+
+
+
+-->
